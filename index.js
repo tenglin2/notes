@@ -32,10 +32,12 @@ let notes = [
 app.get('/', (request, response) => {
 	// Sending the response as a string automatically sets the content type to text/html. I'm pretty sure arrays and objects are interpreted as application/json automatically. How do I force it?
 	response.send('<h1>Hello BRO DOPE ADDITION</h1>');
+	response.end();
 });
 
 app.get('/notes', (request, response) => {
 	response.json(notes);
+	response.end();
 });
 
 app.get('/notes/:id', (request, response) => {
