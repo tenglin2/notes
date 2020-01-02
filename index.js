@@ -6,7 +6,7 @@ const app = express();
 // Forgot to add this.
 // This is confusing. JSON, json() and .json(). Very confusing.
 app.use(bodyParser.json());
-app.use(cors);
+app.use(cors());
 
 let notes = [
 	{
